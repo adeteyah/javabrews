@@ -25,18 +25,6 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="shop.php">Shop</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="about.php">Our Story</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="blog.php">Blog</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="contact.php">Contact Us</a>
-                    </li>
-                    <li class="nav-item mx-2">
                         <a class="nav-link" href="pages/add-product.php">Add Product</a>
                     </li>
                 </ul>
@@ -46,18 +34,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="../index.php">Home</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="../shop.php">Shop</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="../about.php">Our Story</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="../blog.php">Blog</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="../contact.php">Contact Us</a>
                     </li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="../pages/add-product.php">Add Product</a>

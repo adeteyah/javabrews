@@ -1,5 +1,6 @@
 :root {
-    --primary: #080808;
+    --primary: #181818;
+    --primaryVariant: #242424;
     --secondary: #DD3333;
     --accent: #F8E0A8;
     --bs-border-radius: 6px;
@@ -7,6 +8,24 @@
     --bs-body-bg: var(--secondary);
     --bs-heading-color: var(--accent);
     --bs-body-color: var(--accent);
+    --bs-btn-border-color: var(--accent);
+}
+
+.form-control[type=file]{
+    --bs-border-color: var(--secondary);
+    --bs-body-bg: var(--accent);
+    --bs-body-color: var(--primary);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--primaryVariant);
+    --bs-btn-hover-bg: var(--secondary);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-border-color: var(--accent);
+    --bs-btn-color: var(--accent);
+    --bs-btn-active-bg: var(--accent);
+    --bs-btn-active-border-color: var(--accent);
+    --bs-btn-active-color: var(--primary);
 }
 
 a {
@@ -50,11 +69,11 @@ img {
 }
 
 .card-img-product {
-    filter: brightness(45%);
+    filter: brightness(50%);
 }
 
 .card:hover > .card-img-product {
-    filter: brightness(60%);
+    filter: brightness(70%);
 }
 
 .product-price {
