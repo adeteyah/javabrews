@@ -4,6 +4,12 @@ $dbuser = "root";
 $dbpass = "";
 $db = "javabrews";
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed: %s\n" . $conn->error);
+$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+if (strpos($url, 'pages') !== false) {
+    $currPageIsIndex = false; //subpages
+} else {
+    $currPageIsIndex = true; //index
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,7 +21,17 @@ $conn = new mysqli($dbhost, $dbuser, $dbpass, $db) or die("Connect failed: %s\n"
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <?php
+    if ($currPageIsIndex) {
+        ?>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <?php
+    } else {
+        ?>
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <?php
+    }
+    ?>
 </head>
 
 <body class="text-light">

@@ -3,6 +3,10 @@
     --secondary: #DD3333;
     --accent: #F8E0A8;
     --bs-border-radius: 6px;
+    --bs-border-color: var(--secondary);
+    --bs-body-bg: var(--secondary);
+    --bs-heading-color: var(--accent);
+    --bs-body-color: var(--accent);
 }
 
 a {

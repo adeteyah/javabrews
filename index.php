@@ -16,10 +16,10 @@ $result = $conn->query($query);
                         <div class="card">
                             <div class="card text-bg-dark">
                                 <img src="public/images/product_1.jpg" class="card-img img-fluid card-img-product" alt="...">
-                                <div class="card-img-overlay d-flex flex-wrap flex-row align-self-end ">
-                                    <h5 class="product-description">
+                                <div class="card-img-overlay d-flex flex-wrap flex-row align-content-end">
+                                    <p class="h5 fw-bold product-description">
                                         <?= $row["product_name"] ?>
-                                    </h5>
+                                    </p>
                                     <p class="product-description">
                                         <?= $row["product_description"] ?>
                                     </p>
