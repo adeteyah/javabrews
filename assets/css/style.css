@@ -1,0 +1,62 @@
+:root {
+    --primary: #080808;
+    --secondary: #DD3333;
+    --accent: #F8E0A8;
+    --bs-border-radius: 6px;
+}
+
+a {
+    color: var(--secondary);
+}
+
+body {
+    background-color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 100%;
+    margin: auto;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent);
+}
+
+.card {
+    --bs-card-border-width: none;
+    --bs-card-bg: transparent; 
+    --bs-card-color: var(--accent); 
+}
+
+.product-title {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.product-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-img-product {
+    filter: brightness(45%);
+}
+
+.card:hover > .card-img-product {
+    filter: brightness(60%);
+}
+
+.product-price {
+    visibility: hidden;
+}
+
+.card:hover + .product-price {
+    visibility: visible;
+}
