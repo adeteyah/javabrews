@@ -25,7 +25,10 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="pages/add-product.php">Add Product</a>
+                        <a class="nav-link" href="index.php">Link 1</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.php">Link 2</a>
                     </li>
                 </ul>
                 <?php
@@ -36,7 +39,10 @@
                         <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="../pages/add-product.php">Add Product</a>
+                        <a class="nav-link" href="../index.php">Link 1</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="../index.php">Link 2</a>
                     </li>
                 </ul>
                 <?php

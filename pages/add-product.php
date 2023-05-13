@@ -16,4 +16,6 @@ if (isset($_POST['inputAdd'])) {
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);
     }
+} else {
+    header('Location: ../');
 } ?>

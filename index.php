@@ -9,11 +9,12 @@ $result = $conn->query($query);
 
 <div class="container">
     <div class="row">
-        <div class="d-flex align-items-center col col-2">
+        <div class="d-flex flex-column align-items-center col col-2">
             <div class="ratio ratio ratio-1x1">
-                <img id="productImagePreview" src="public/images/imagePlacholder.png"
-                    class="rounded-circle object-fit-cover" alt="Pendiri" title="Pendiri Javabrews">
+                <img id="productImagePreview" src="public/images/imagePlacholder.jpg"
+                    class="rounded-circle object-fit-cover">
             </div>
+            <small class="mt-3">Preview Product Image</small>
         </div>
         <div class="col col-10">
             <form enctype="multipart/form-data" action="pages/add-product.php" method="post">
@@ -22,32 +23,33 @@ $result = $conn->query($query);
                     <div class="row mb-3">
                         <div class="col">
                             <label for="inputProductName" class="small form-label">Nama Produk</label>
-                            <input name="inputProductName" type="text" class="form-control" id="inputProductName">
+                            <input name="inputProductName" type="text" class="form-control form-control-sm"
+                                id="inputProductName">
                         </div>
                         <div class="col">
                             <label for="inputProductDescription" class="small form-label">Deskripsi Produk</label>
-                            <input name="inputProductDescription" type="text" class="form-control"
+                            <input name="inputProductDescription" type="text" class="form-control form-control-sm"
                                 id="inputProductDescription">
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col">
                             <label for="inputProductPrice" class="small form-label">Harga Produk</label>
-                            <input required name="inputProductPrice" type="number" min="0" class="form-control"
-                                id="inputProductPrice">
+                            <input required name="inputProductPrice" type="number" min="0"
+                                class="form-control form-control-sm" id="inputProductPrice">
                         </div>
                         <div class="col">
                             <label for="inputProductImage" class="small form-label">Foto Produk</label>
-                            <input required name="inputProductImage" class="form-control" type="file" accept="image/*"
-                                id="inputProductImage">
+                            <input required name="inputProductImage" class="form-control form-control-sm" type="file"
+                                accept="image/*" id="inputProductImage">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <input type="reset" class="btn btn-primary w-100">
+                            <input type="reset" class="btn btn-primary btn-sm w-100">
                         </div>
                         <div class="col">
-                            <input name="inputAdd" type="submit" class="btn btn-primary w-100">
+                            <input name="inputAdd" type="submit" class="btn btn-primary btn-sm w-100">
                         </div>
                     </div>
                 </div>
@@ -59,23 +61,33 @@ $result = $conn->query($query);
         <?php if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) { ?>
                 <div class="col">
-                    <div class="card">
-                        <div class="card text-bg-dark ratio ratio-1x1">
-                            <img src="public/products/<?= $row["product_image"] ?>"
-                                class="card-img card-img-product  object-fit-cover" alt="<?= $row["product_image"] ?>"
-                                title="<?= $row["product_name"] ?>">
-                            <div class="card-img-overlay d-flex flex-wrap flex-row align-content-end">
-                                <p class="w-100 h5 fw-bold product-description">
-                                    <?= $row["product_name"] ?>
-                                </p>
-                                <p class="w-100 product-description">
-                                    <?= $row["product_description"] ?>
-                                </p>
+                    <div class="product">
+                        <div class="card">
+                            <div class="card text-bg-dark ratio ratio-1x1">
+                                <img src="public/products/<?= $row["product_image"] ?>"
+                                    class="card-img card-img-product  object-fit-cover" alt="<?= $row["product_image"] ?>"
+                                    title="<?= $row["product_name"] ?>">
+                                <div class="card-img-overlay d-flex flex-wrap align-content-end">
+                                    <p class="w-100 h5 fw-bold product-description">
+                                        <?= $row["product_name"] ?>
+                                    </p>
+                                    <p class="w-100 product-description">
+                                        <?= $row["product_description"] ?>
+                                    </p>
+                                    <p class="w-100 product-price">
+                                        <?= "Rp. " . number_format($row["product_price"], 2, ',', '.'); ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="text-light product-price my-3">
-                        <?= "Rp. " . number_format($row["product_price"], 2, ',', '.'); ?>
+                        <div class="product-option py-3">
+                            <div class="d-grid gap-2 d-md-block">
+                                <a class="btn btn-primary"
+                                    href="pages/edit-product.php?product_id=<?= $row["product_id"] ?>">Edit</a>
+                                <a class="btn btn-secondary"
+                                    href="pages/delete-product.php?product_id=<?= $row["product_id"] ?>">Delete</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             <?php }

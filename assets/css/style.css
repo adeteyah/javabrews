@@ -2,25 +2,37 @@
     --primary: #181818;
     --primaryVariant: #242424;
     --secondary: #DD3333;
+    --secondaryVariant: #c89b9b;
     --accent: #F8E0A8;
     --bs-border-radius: 6px;
-    --bs-border-color: var(--secondary);
-    --bs-body-bg: var(--secondary);
+    --bs-border-color: var(--accent);
+    --bs-body-bg: var(--primary);
     --bs-heading-color: var(--accent);
     --bs-body-color: var(--accent);
     --bs-btn-border-color: var(--accent);
 }
 
 .form-control[type=file]{
-    --bs-border-color: var(--secondary);
-    --bs-body-bg: var(--accent);
     --bs-body-color: var(--primary);
 }
 
 .btn-primary {
     --bs-btn-bg: var(--primaryVariant);
+    --bs-btn-hover-bg: var(--accent);
+    --bs-btn-hover-color: var(--primary);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-border-color: var(--accent);
+    --bs-btn-color: var(--accent);
+    --bs-btn-active-bg: var(--accent);
+    --bs-btn-active-border-color: var(--accent);
+    --bs-btn-active-color: var(--primary);
+}
+
+.btn-secondary {
+    --bs-btn-bg: var(--primary);
     --bs-btn-hover-bg: var(--secondary);
     --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-color: var(--accent);
     --bs-btn-hover-border-color: var(--accent);
     --bs-btn-color: var(--accent);
     --bs-btn-active-bg: var(--accent);
@@ -76,10 +88,10 @@ img {
     filter: brightness(70%);
 }
 
-.product-price {
+.product-option {
     visibility: hidden;
 }
 
-.card:hover + .product-price {
+.product:hover > .product-option {
     visibility: visible;
 }
